@@ -1,0 +1,314 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #176567;
+  width: 100%;
+  text-decoration: none;
+}
+header .Services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 55px;
+  gap: 20px;
+  text-transform: uppercase;
+  border-radius: 7px;
+}
+header .Services button {
+  padding: 10px;
+  color: rgb(245, 238, 227);
+  font-size: 0.9em;
+  font-weight: 750;
+  border-radius: 24px;
+  background-color: #3a6cf4;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 5px 2px 1px 1px black;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: "roboto", sans-serif;
+}
+header .Services button:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+  background-color: #afc3fa;
+}
+header .Services button:active {
+  transform: scale(0.9);
+  transition: 0.5s ease;
+  background-color: #f99cb5;
+}
+header .logo {
+  color: #5e87f7;
+  font-size: 3.3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Anton";
+  margin-left: 20px;
+  letter-spacing: 4px;
+  cursor: context-menu;
+  text-shadow: 3px 5px 3px black;
+}
+header .logo:hover {
+  color: #afc3fa;
+  transition: 0.5s ease;
+}
+/* End of Header */
+/* Main */
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  background: linear-gradient(to bottom, #5c9394, skyblue);
+  background-size: cover;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+.main h1 {
+  font-family: "roboto";
+  font-size: 3em;
+  color: #f9f9f9;
+  text-shadow: 3px 5px 3px black;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+.main h1 span {
+  color: rgb(233, 120, 100);
+}
+.main h3 {
+  font-family: "roboto";
+  font-size: 1.5em;
+  color: #f9f9f9;
+  text-shadow: 3px 5px 3px black;
+  letter-spacing: 2px;
+}
+.main img {
+  width: 50%;
+  max-height: 20%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px black;
+}
+.main img:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+/* End of Main */
+
+/* Player Sections */
+section.player-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #5c9394, skyblue);
+  text-align: center;
+}
+section.player-section:nth-child(even) {
+  background: linear-gradient(to bottom, skyblue, #5c9394);
+}
+.player-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.player-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 5px 5px 5px black;
+}
+.player-card img:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.player-card .details {
+  text-align: left;
+}
+.player-card .details h2 {
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 3px 3px 3px black;
+}
+.player-card .details p {
+  font-size: 1em;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+}
+/* End of Player Sections */
+
+/* Top Players Section */
+
+.top-players-section {
+  background: linear-gradient(to bottom, #5c9394, skyblue);
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+}
+
+.top-players-section .slide:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  transition: 0.7s ease;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+.slider::-webkit-scrollbar {
+  height: 8px;
+}
+.slider::-webkit-scrollbar-thumb {
+  background: #3a6cf4;
+  border-radius: 10px;
+}
+.slide {
+  flex: 0 0 auto;
+  width: 200px;
+  text-align: center;
+}
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.slide p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* End of Top Players Section */
+
+/* news section */
+
+.news-section {
+  background: linear-gradient(to bottom, skyblue, #5c9394);
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+}
+.news-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.news-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.news-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.news-card h3 {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 2px 2px 2px black;
+}
+.news-card p {
+  font-size: 1em;
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* End of news section */
+
+/* Contact Section */
+
+.contact-section {
+  background: linear-gradient(to bottom, #5c9394, skyblue);
+  padding: 50px 20px;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+}
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+}
+.contact-form button {
+  padding: 10px;
+  background-color: #3a6cf4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.contact-form button:hover {
+  background-color: #afc3fa;
+  transition: 0.3s ease;
+}
+
+/* End of Contact Section */
+
+/* Footer */
+
+footer {
+  background-color: #176567;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: "roboto", sans-serif;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #afc3fa;
+  transition: 0.3s ease;
+}
+
+/* End of Footer */

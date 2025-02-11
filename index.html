@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Verse</title>
+    <link rel="Stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style -->
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      /* Header */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #176567;
+        width: 100%;
+        text-decoration: none;
+      }
+      header .Services {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 55px;
+        gap: 20px;
+        text-transform: uppercase;
+        border-radius: 7px;
+      }
+      header .Services button {
+        padding: 10px;
+        color: rgb(245, 238, 227);
+        font-size: 0.9em;
+        font-weight: 750;
+        border-radius: 24px;
+        background-color: #3a6cf4;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 5px 2px 1px 1px black;
+        letter-spacing: 2px;
+        cursor: pointer;
+        font-family: "roboto", sans-serif;
+      }
+      header .Services button:hover {
+        transform: scale(1.1);
+        transition: 0.5s ease;
+        background-color: #afc3fa;
+      }
+      header .Services button:active {
+        transform: scale(0.9);
+        transition: 0.5s ease;
+        background-color: #f99cb5;
+      }
+      header .logo {
+        color: #5e87f7;
+        font-size: 3.3em;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: "Anton";
+        margin-left: 20px;
+        letter-spacing: 4px;
+        cursor: context-menu;
+        text-shadow: 3px 5px 3px black;
+      }
+      header .logo:hover {
+        color: #afc3fa;
+        transition: 0.5s ease;
+      }
+      /* End of Header */
+      /* Main */
+      .main {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        font-family: "roboto", sans-serif;
+        background: linear-gradient(to bottom, #5c9394, skyblue);
+        background-size: cover;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+      }
+      .main h1 {
+        font-family: "roboto";
+        font-size: 3em;
+        color: #f9f9f9;
+        text-shadow: 3px 5px 3px black;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+      .main h1 span {
+        color: rgb(233, 120, 100);
+      }
+      .main h3 {
+        font-family: "roboto";
+        font-size: 1.5em;
+        color: #f9f9f9;
+        text-shadow: 3px 5px 3px black;
+        letter-spacing: 2px;
+      }
+      .main img {
+        width: 50%;
+        max-height: 20%;
+        border-radius: 50%;
+        box-shadow: 5px 5px 5px black;
+      }
+      .main img:hover {
+        transform: scale(1.1);
+        transition: 1s ease;
+      }
+      /* End of Main */
+
+      /* Player Sections */
+      section.player-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+        background: linear-gradient(to bottom, #5c9394, skyblue);
+        text-align: center;
+      }
+      section.player-section:nth-child(even) {
+        background: linear-gradient(to bottom, skyblue, #5c9394);
+      }
+      .player-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+      .player-card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 5px 5px 5px black;
+      }
+      .player-card img:hover {
+        transform: scale(1.1);
+        transition: 0.5s ease;
+      }
+      .player-card .details {
+        text-align: left;
+      }
+      .player-card .details h2 {
+        font-size: 2em;
+        color: #fff;
+        text-shadow: 3px 3px 3px black;
+      }
+      .player-card .details p {
+        font-size: 1em;
+        color: #fff;
+        text-shadow: 2px 2px 2px black;
+      }
+      /* End of Player Sections */
+
+      /* Top Players Section */
+
+      .top-players-section {
+        background: linear-gradient(to bottom, #5c9394, skyblue);
+        padding: 50px 20px;
+        text-align: center;
+        font-family: "roboto", sans-serif;
+      }
+
+      .top-players-section .slide:hover {
+        transform: scale3d(1.1, 1.1, 1.1);
+        transition: 0.7s ease;
+      }
+
+      .slider {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        scroll-behavior: smooth;
+      }
+      .slider::-webkit-scrollbar {
+        height: 8px;
+      }
+      .slider::-webkit-scrollbar-thumb {
+        background: #3a6cf4;
+        border-radius: 10px;
+      }
+      .slide {
+        flex: 0 0 auto;
+        width: 200px;
+        text-align: center;
+      }
+      .slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+      .slide p {
+        margin-top: 10px;
+        font-size: 1.2em;
+        color: #fff;
+        text-shadow: 2px 2px 2px black;
+      }
+
+      /* End of Top Players Section */
+
+      /* news section */
+
+      .news-section {
+        background: linear-gradient(to bottom, skyblue, #5c9394);
+        padding: 50px 20px;
+        text-align: center;
+        font-family: "roboto", sans-serif;
+      }
+      .news-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .news-card {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+      .news-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .news-card h3 {
+        font-size: 1.5em;
+        color: #fff;
+        margin: 10px 0;
+        text-shadow: 2px 2px 2px black;
+      }
+      .news-card p {
+        font-size: 1em;
+        color: #fff;
+        text-shadow: 1px 1px 1px black;
+      }
+
+      /* End of news section */
+
+      /* Contact Section */
+
+      .contact-section {
+        background: linear-gradient(to bottom, #5c9394, skyblue);
+        padding: 50px 20px;
+        text-align: center;
+        font-family: "roboto", sans-serif;
+      }
+      .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1em;
+      }
+      .contact-form button {
+        padding: 10px;
+        background-color: #3a6cf4;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+      .contact-form button:hover {
+        background-color: #afc3fa;
+        transition: 0.3s ease;
+      }
+
+      /* End of Contact Section */
+
+      /* Footer */
+
+      footer {
+        background-color: #176567;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-family: "roboto", sans-serif;
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .social-icons a {
+        color: #fff;
+        font-size: 1.5em;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .social-icons a:hover {
+        color: #afc3fa;
+        transition: 0.3s ease;
+      }
+
+      /* End of Footer */
+    </style>
+
+    <!-- End of Style -->
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="logo">
+        <span> Player Verse </span>
+      </div>
+      <div class="Services">
+        <a><button>HOME</button></a>
+        <a><button>About</button></a>
+        <a><button>Services</button></a>
+        <a><button>Contact</button></a>
+      </div>
+    </header>
+
+    <!-- End of Header -->
+
+    <!-- Main Section -->
+
+    <section class="main">
+      <div class="mainText">
+        <h1><span>PlayerVerse</span>, Your Ultimate Player Hub!</h1>
+        <h3>
+          Welcome to PlayerVerse , the perfect destination for sports and gaming
+          fans! 🏀🎮
+        </h3>
+        <h3>Here, you'll find everything about your favorite players,</h3>
+        <h3>from global football stars to eSports legends.</h3>
+      </div>
+      <div class="mainImage">
+        <img src="/photos/Logo.png" alt="mainImage" />
+      </div>
+    </section>
+
+    <!-- End of Main Section -->
+
+    <!-- Player Sections -->
+    <section class="player-section">
+      <div class="player-card">
+        <img src="/photos/plyers/Messi/messi.avif" alt="Player 1" />
+        <div class="details">
+          <h2>Lionel Messi</h2>
+          <p>
+            Lionel Messi is an Argentine professional footballer widely regarded
+            as one of the greatest players of all time. He plays as a forward
+            and captains both Major League Soccer club Inter Miami and the
+            Argentina national team.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="player-section">
+      <div class="player-card">
+        <img
+          src="/photos/plyers/cristiano ronaldo/cristiano-ronaldo-of-portugal-reacts-as-he-looks-on-during-news-photo-1725633476.avif"
+          alt="Player 2"
+        />
+        <div class="details">
+          <h2>Cristiano Ronaldo</h2>
+          <p>
+            Cristiano Ronaldo is a Portuguese professional footballer who plays
+            as a forward for and captains both Saudi Pro League club Al Nassr
+            and the Portugal national team. Known for his incredible athleticism
+            and goal-scoring ability.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="player-section">
+      <div class="player-card">
+        <img
+          src="/photos/plyers/Becham/ab7be23309a37ae415f4c32d97e7f357Y29udGVudHNlYXJjaGFwaSwxNzE4NjE3OTgw-2.2052463.avif"
+          alt="Player 3"
+        />
+        <div class="details">
+          <h2>David Beckham</h2>
+          <p>
+            David Beckham is an English former professional footballer known for
+            his incredible crossing ability, vision, and free-kick expertise. He
+            played as a midfielder and captained the England national team.
+            Beckham is also famous for his time at Manchester United, Real
+            Madrid, LA Galaxy, and Paris Saint-Germain. Beyond football, he is a
+            global icon and philanthropist.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="player-section">
+      <div class="player-card">
+        <img src="/photos/plyers/Torres/download.jpg" alt="Player 4" />
+        <div class="details">
+          <h2>Fernando Torres</h2>
+          <p>
+            Fernando José Torres Sanz, commonly known as Fernando Torres, is a
+            Spanish former professional footballer who played as a striker.
+            Renowned for his speed, goal-scoring ability, and technical skills,
+            Torres achieved legendary status with Liverpool and the Spain
+            national team. He was instrumental in Spain's victories in UEFA Euro
+            2008, FIFA World Cup 2010, and UEFA Euro 2012.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="player-section">
+      <div class="player-card">
+        <img src="/photos/plyers/Mo Salah/download.jpg" alt="Mohamed Salah" />
+        <div class="details">
+          <h2>Mohamed Salah</h2>
+          <p>
+            Mohamed Salah is an Egyptian professional footballer who plays as a
+            forward for Premier League club Liverpool and captains the Egypt
+            national team. Known for his incredible speed, dribbling skills, and
+            goal-scoring ability, Salah has become one of the most feared
+            attackers in world football. He has won numerous awards, including
+            the Premier League Golden Boot multiple times, and was named African
+            Footballer of the Year in 2017 and 2018.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Player Sections -->
+
+    <!-- top-players-section -->
+
+    <section class="top-players-section">
+      <h2
+        style="
+          text-align: center;
+          color: #fff;
+          font-size: 2.5em;
+          margin-bottom: 30px;
+        "
+      >
+        Top Players
+      </h2>
+      <div class="slider">
+        <div class="slide">
+          <img src="/photos/plyers/Mo Salah/download.jpg" alt="Mohamed Salah" />
+          <p>Mohamed Salah</p>
+        </div>
+        <div class="slide">
+          <img
+            src="/photos/plyers/cristiano ronaldo/cristiano-ronaldo-of-portugal-reacts-as-he-looks-on-during-news-photo-1725633476.avif"
+            alt="Mohamed Salah"
+          />
+          <p>Cristiano Ronaldo</p>
+        </div>
+
+        <div class="slide">
+          <img
+            src="/photos/plyers/Becham/ab7be23309a37ae415f4c32d97e7f357Y29udGVudHNlYXJjaGFwaSwxNzE4NjE3OTgw-2.2052463.avif"
+            alt="David Beckham"
+          />
+          <p>David Beckham</p>
+        </div>
+        <div class="slide">
+          <img src="/photos/plyers/Torres/download.jpg" alt="Fernando Torres" />
+          <p>Fernando Torres</p>
+        </div>
+        <div class="slide">
+          <img
+            src="/photos/plyers/cristiano ronaldo/cristiano-ronaldo-of-portugal-reacts-as-he-looks-on-during-news-photo-1725633476.avif"
+            alt="Mohamed Salah"
+          />
+          <p>Cristiano Ronaldo</p>
+        </div>
+        <div class="slide">
+          <img src="/photos/plyers/Mo Salah/download.jpg" alt="Mohamed Salah" />
+          <p>Mohamed Salah</p>
+        </div>
+        <div class="slide">
+          <img src="/photos/plyers/Messi/messi.avif" alt="Lionel Messi" />
+          <p>Lionel Messi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of top-players-section -->
+
+    <!-- news-section -->
+
+    <section class="news-section">
+      <h2
+        style="
+          text-align: center;
+          color: #fff;
+          font-size: 2.5em;
+          margin-bottom: 30px;
+        "
+      >
+        Latest News
+      </h2>
+      <div class="news-cards">
+        <div class="news-card">
+          <img src="/photos/plyers/Mo Salah/download.jpg" alt="News 1" />
+          <h3>Salah Wins Golden Boot Again!</h3>
+          <p>
+            Mohamed Salah has won the Premier League Golden Boot for the third
+            time in his career...
+          </p>
+        </div>
+        <div class="news-card">
+          <img
+            src="/photos/plyers/Becham/3e947186d512164cf8dbe0987a865dd2b714eea6.png.webp"
+            alt="News 2"
+          />
+          <h3>Beckham Launches New Football Academy</h3>
+          <p>
+            David Beckham has announced the launch of a new football academy in
+            Miami...
+          </p>
+        </div>
+        <div class="news-card">
+          <img src="/photos/plyers/Torres/download.jpg" alt="News 3" />
+          <h3>Torres Joins Coaching Staff at Atletico</h3>
+          <p>
+            Fernando Torres has joined Atletico Madrid's coaching staff as an
+            assistant manager...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of news-section -->
+
+    <!-- contact-section -->
+
+    <section class="contact-section">
+      <h2
+        style="
+          text-align: center;
+          color: #fff;
+          font-size: 2.5em;
+          margin-bottom: 30px;
+        "
+      >
+        Contact Us
+      </h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- end of contact-section -->
+
+    <!-- footer -->
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Player Verse. All rights reserved.</p>
+        <div class="social-icons">
+          <a target="_blank" href="https://github.com/aliabdelazim7"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/ali-abdelazim-a40941176/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a target="_blank" href="https://www.instagram.com/ali_abdelazim7/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a target="_blank" href="https://www.facebook.com/3li3wadii"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- end of footer -->
+  </body>
+</html>
