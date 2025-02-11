@@ -338,6 +338,193 @@
       }
 
       /* End of Footer */
+
+      /* Media Queries for Responsive Design */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  header .logo {
+    margin-left: 0;
+    font-size: 2.5em;
+  }
+  header .Services {
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px 20px;
+  }
+  header .Services button {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  /* Main Section */
+  .main {
+    padding: 20px;
+  }
+  .main h1 {
+    font-size: 2em;
+  }
+  .main h3 {
+    font-size: 1.2em;
+  }
+  .main img {
+    width: 70%;
+  }
+
+  /* Player Sections */
+  .player-card {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+  .player-card img {
+    width: 150px;
+    height: 150px;
+  }
+  .player-card .details {
+    text-align: center;
+  }
+
+  /* Top Players Section */
+  .slider {
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px; /* Add padding for scrollbar */
+  }
+  .slide {
+    width: 150px;
+  }
+  .slide img {
+    height: 150px;
+  }
+
+  /* News Section */
+  .news-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news-card {
+    width: 90%;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    width: 90%;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* For mobile phones (480px and below) */
+@media (max-width: 480px) {
+  /* Header */
+  header .logo {
+    font-size: 2em;
+  }
+  header .Services button {
+    font-size: 0.7em;
+  }
+
+  /* Main Section */
+  .main h1 {
+    font-size: 1.8em;
+  }
+  .main h3 {
+    font-size: 1em;
+  }
+  .main img {
+    width: 80%;
+  }
+
+  /* Player Sections */
+  .player-card {
+    width: 95%;
+  }
+  .player-card img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Top Players Section */
+  .slide {
+    width: 120px;
+  }
+  .slide img {
+    height: 120px;
+  }
+
+  /* News Section */
+  .news-card {
+    width: 95%;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    width: 95%;
+  }
+
+  /* Footer */
+  .footer-content {
+    text-align: center;
+  }
+}
+
+/* For very small screens (320px and below) */
+@media (max-width: 320px) {
+  /* Header */
+  header .logo {
+    font-size: 1.8em;
+  }
+  header .Services button {
+    font-size: 0.6em;
+  }
+
+  /* Main Section */
+  .main h1 {
+    font-size: 1.5em;
+  }
+  .main h3 {
+    font-size: 0.9em;
+  }
+  .main img {
+    width: 90%;
+  }
+
+  /* Player Sections */
+  .player-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Top Players Section */
+  .slide {
+    width: 100px;
+  }
+  .slide img {
+    height: 100px;
+  }
+
+  /* News Section */
+  .news-card {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact-form {
+    width: 100%;
+  }
+}
+      
     </style>
 
     <!-- End of Style -->
