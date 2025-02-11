@@ -314,188 +314,148 @@ footer {
 /* End of Footer */
 
 
-/* Media Queries for Responsive Design */
-
-/* For tablets (768px and below) */
-@media (max-width: 768px) {
-  /* Header */
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-  }
-  header .logo {
-    margin-left: 0;
-    font-size: 2.5em;
-  }
-  header .Services {
-    flex-direction: column;
-    gap: 10px;
-    padding: 8px 20px;
-  }
-  header .Services button {
-    width: 100%;
-    font-size: 0.8em;
-  }
-
-  /* Main Section */
-  .main {
-    padding: 20px;
-  }
-  .main h1 {
-    font-size: 2em;
-  }
-  .main h3 {
-    font-size: 1.2em;
-  }
-  .main img {
-    width: 70%;
-  }
-
-  /* Player Sections */
-  .player-card {
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
-  }
-  .player-card img {
-    width: 150px;
-    height: 150px;
-  }
-  .player-card .details {
-    text-align: center;
-  }
-
-  /* Top Players Section */
-  .slider {
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 10px; /* Add padding for scrollbar */
-  }
-  .slide {
-    width: 150px;
-  }
-  .slide img {
-    height: 150px;
-  }
-
-  /* News Section */
-  .news-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .news-card {
-    width: 90%;
-  }
-
-  /* Contact Section */
-  .contact-form {
-    width: 90%;
-  }
-
-  /* Footer */
-  .footer-content {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* For mobile phones (480px and below) */
-@media (max-width: 480px) {
-  /* Header */
-  header .logo {
-    font-size: 2em;
-  }
-  header .Services button {
-    font-size: 0.7em;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Default styles for larger screens (desktops) */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
 
-  /* Main Section */
-  .main h1 {
-    font-size: 1.8em;
+  header,
+  footer,
+  main,
+  section,
+  article {
+    padding: 15px;
   }
-  .main h3 {
-    font-size: 1em;
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  .main img {
+
+  .container {
+    width: 95%;
+  }
+
+  img {
     width: 80%;
   }
 
-  /* Player Sections */
-  .player-card {
-    width: 95%;
-  }
-  .player-card img {
-    width: 120px;
-    height: 120px;
-  }
-
-  /* Top Players Section */
-  .slide {
-    width: 120px;
-  }
-  .slide img {
-    height: 120px;
-  }
-
-  /* News Section */
-  .news-card {
-    width: 95%;
-  }
-
-  /* Contact Section */
-  .contact-form {
-    width: 95%;
-  }
-
-  /* Footer */
-  .footer-content {
-    text-align: center;
+  button,
+  input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
-/* For very small screens (320px and below) */
-@media (max-width: 320px) {
-  /* Header */
-  header .logo {
-    font-size: 1.8em;
-  }
-  header .Services button {
-    font-size: 0.6em;
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
   }
 
-  /* Main Section */
-  .main h1 {
-    font-size: 1.5em;
+  header,
+  footer,
+  main,
+  section,
+  article {
+    padding: 10px;
   }
-  .main h3 {
-    font-size: 0.9em;
+
+  .container {
+    width: 100%;
   }
-  .main img {
+
+  img {
     width: 90%;
   }
 
-  /* Player Sections */
-  .player-card img {
-    width: 100px;
-    height: 100px;
+  button,
+  input,
+  textarea {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
   }
 
-  /* Top Players Section */
-  .slide {
-    width: 100px;
-  }
-  .slide img {
-    height: 100px;
+  h1 {
+    font-size: 1.5rem;
   }
 
-  /* News Section */
-  .news-card {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Very small screens (320px and below) */
+@media (max-width: 320px) {
+  body {
+    font-size: 10px;
+  }
+
+  header,
+  footer,
+  main,
+  section,
+  article {
+    padding: 8px;
+  }
+
+  img {
     width: 100%;
   }
 
-  /* Contact Section */
-  .contact-form {
-    width: 100%;
+  button,
+  input,
+  textarea {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
   }
 }
