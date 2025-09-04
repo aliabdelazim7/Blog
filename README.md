@@ -1,5 +1,5 @@
 # 🏆 PlayerVerse - Your Ultimate Player Hub
-
+Live link: https://blog-player-verse.netlify.app/
 A modern, interactive sports and gaming player showcase website built with HTML, CSS, and JavaScript. Discover the world's greatest athletes and gamers with an enhanced user experience.
 
 ## ✨ New Features & Enhancements
