@@ -1,0 +1,59 @@
+{
+  "name": "playerverse",
+  "version": "2.0.0",
+  "description": "Your Ultimate Player Hub - A modern, interactive sports and gaming player showcase website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "dev": "npx live-server --port=8000",
+    "build": "echo 'Build process not yet implemented'",
+    "test": "echo 'Tests not yet implemented'",
+    "lint": "echo 'Linting not yet implemented'"
+  },
+  "keywords": [
+    "sports",
+    "gaming",
+    "players",
+    "football",
+    "esports",
+    "showcase",
+    "responsive",
+    "modern",
+    "interactive",
+    "web-design"
+  ],
+  "author": {
+    "name": "Ali Abdelazim",
+    "email": "ali.abdelazim7@gmail.com",
+    "url": "https://github.com/aliabdelazim7"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliabdelazim7/PlayerVerse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aliabdelazim7/PlayerVerse/issues"
+  },
+  "homepage": "https://github.com/aliabdelazim7/PlayerVerse#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "dependencies": {},
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/aliabdelazim7"
+  }
+}
